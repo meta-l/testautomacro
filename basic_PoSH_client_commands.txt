@@ -3,3 +3,5 @@ Use with 'Macro test - Powershell - tcplistener.docm'
 $server = '0.0.0.0'
 $port = 9999
 $client = New-Object System.Net.Sockets.TcpClient $server, $port
+
+Run 'netstat -ano | Select-String 9999' to show TCP connections on the port
